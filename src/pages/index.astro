@@ -1,0 +1,243 @@
+---
+import '../styles/global.css';
+
+const interests = [
+  ['01', 'Anime & Manga', 'Stories, characters, worlds, and the kind of fictional attachment that makes humanity question its priorities.'],
+  ['02', 'Coding', 'Learning to turn ideas into real things. The goal is to become a coder and build something of my own.'],
+  ['03', 'Creative Work', 'Wallpapers, edits, aesthetics, and little experiments that make the internet feel more personal.'],
+  ['04', 'Big Dreams', 'I want to build something meaningful, start my own company, and become successful.'],
+];
+
+const traits = ['introvert', 'curious', 'ambitious', 'otaku', 'dreamer'];
+
+const fallbackQuotes = [
+  ['The future depends on what you do today.', 'Mahatma Gandhi'],
+  ['The only way to do great work is to love what you do.', 'Steve Jobs'],
+  ['It always seems impossible until it’s done.', 'Nelson Mandela'],
+  ['Dreams are the seedlings of realities.', 'James Allen'],
+  ['The journey of a thousand miles begins with one step.', 'Lao Tzu'],
+  ['Great things are done by a series of small things brought together.', 'Vincent van Gogh'],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08111b" />
+    <meta name="description" content="Mewtwo — A Legendary Pokémon. A personal space for anime, ideas, code, and big dreams." />
+    <meta property="og:title" content="Mewtwo — A Legendary Pokémon" />
+    <meta property="og:description" content="Anime, ideas, code, and big dreams beneath a Japanese sky." />
+    <title>Mewtwo — A Legendary Pokémon</title>
+  </head>
+
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="petal-field" aria-hidden="true"></div>
+
+    <header class="nav">
+      <a class="brand" href="#home" aria-label="Mewtwo home">
+        <span class="brand-symbol">M</span>
+        <span>MEWTWO</span>
+      </a>
+      <nav>
+        <a href="#about">about</a>
+        <a href="#interests">interests</a>
+        <a href="#quotes">quotes</a>
+      </nav>
+      <a class="nav-discord" href="https://discord.com/users/750421751137173544" target="_blank" rel="noreferrer">discord ↗</a>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="sky">
+          <div class="sun"></div>
+          <div class="moon"></div>
+          <div class="cloud cloud-a"></div>
+          <div class="cloud cloud-b"></div>
+          <div class="cloud cloud-c"></div>
+          <div class="mountain mountain-back"></div>
+          <div class="mountain mountain-mid"></div>
+          <div class="mountain mountain-front"></div>
+          <div class="torii" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="lantern lantern-a"></div>
+          <div class="lantern lantern-b"></div>
+          <div class="village"></div>
+          <div class="ground"></div>
+          <div class="grass"></div>
+        </div>
+
+        <div class="hero-content">
+          <p class="jp">静かな場所から、大きな夢を。</p>
+          <p class="kicker"><span></span> A LEGENDARY POKÉMON <span></span></p>
+          <h1>MEWTWO</h1>
+          <p class="hero-copy">A quiet corner of the internet for <em>anime, ideas, code</em> and dreams that refuse to stay small.</p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#about">enter the world <span>↓</span></a>
+            <a class="button button-glass" href="https://discord.com/users/750421751137173544" target="_blank" rel="noreferrer"><span class="discord-dot">●</span> Discord</a>
+          </div>
+        </div>
+
+        <div class="scroll-cue"><span></span> SCROLL TO EXPLORE</div>
+        <div class="hero-location">JAPAN / 35°41′N 139°41′E</div>
+      </section>
+
+      <section class="intro section" id="about">
+        <div class="section-index">01 / about</div>
+        <div class="intro-grid">
+          <div>
+            <p class="overline">WHO IS MEWTWO?</p>
+            <h2>Quiet by nature.<br /><span>Big on dreams.</span></h2>
+          </div>
+          <div class="body-copy">
+            <p>I'm <strong>Goutam</strong>, online as <strong>Mewtwo</strong>. I'm a student, introvert, otaku, and someone who wants to build something genuinely big in the future.</p>
+            <p>I like anime and manga, I'm fascinated by technology and coding, and I enjoy turning ideas into visual little worlds. I'm still learning, but that's part of the story.</p>
+            <div class="traits">
+              {traits.map((trait) => <span>#{trait}</span>)}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="landscape-break" aria-label="Japanese landscape transition">
+        <div class="rising-sun"></div>
+        <div class="ridge ridge-one"></div>
+        <div class="ridge ridge-two"></div>
+        <div class="field-lines"></div>
+        <p>夢 · 旅 · 未来</p>
+      </section>
+
+      <section class="section interests" id="interests">
+        <div class="section-index">02 / interests</div>
+        <div class="section-heading">
+          <p class="overline">THE THINGS THAT KEEP ME MOVING</p>
+          <h2>What I like.<br /><span>What I want to build.</span></h2>
+        </div>
+        <div class="interest-grid">
+          {interests.map(([number, title, text]) => (
+            <article class="interest-card">
+              <div class="card-number">{number}</div>
+              <div>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </div>
+              <span class="card-arrow">↗</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="quote-section section" id="quotes">
+        <div class="quote-orbit orbit-one"></div>
+        <div class="quote-orbit orbit-two"></div>
+        <div class="section-index">03 / quotes</div>
+        <div class="quote-card">
+          <div class="quote-top"><span>QUOTE OF THE MOMENT</span><button id="new-quote" type="button" aria-label="Get a new quote">↻</button></div>
+          <blockquote id="quote-text">“The future depends on what you do today.”</blockquote>
+          <p id="quote-author">— Mahatma Gandhi</p>
+          <div class="quote-status"><span id="quote-dot"></span><span id="quote-source">ready</span></div>
+        </div>
+      </section>
+
+      <section class="now section">
+        <div class="section-index">04 / now</div>
+        <div class="now-grid">
+          <div>
+            <p class="overline">CURRENTLY</p>
+            <h2>Still becoming<br /><span>who I want to be.</span></h2>
+          </div>
+          <div class="now-list">
+            <div><span>learning</span><strong>coding</strong></div>
+            <div><span>watching</span><strong>anime</strong></div>
+            <div><span>reading</span><strong>manga</strong></div>
+            <div><span>building</span><strong>the future</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="finale">
+        <div class="finale-sky"></div>
+        <div class="finale-copy">
+          <p class="jp">また、ここで。</p>
+          <h2>See you<br /><em>under the sakura.</em></h2>
+          <a class="button button-light" href="https://discord.com/users/750421751137173544" target="_blank" rel="noreferrer">find me on Discord ↗</a>
+        </div>
+        <footer>
+          <span>MEWTWO © 2026</span>
+          <span>A LEGENDARY POKÉMON</span>
+          <span>made with curiosity + too many late nights</span>
+        </footer>
+      </section>
+    </main>
+
+    <script define:vars={{ fallbackQuotes }}>
+      const petals = document.querySelector('.petal-field');
+      const quoteText = document.querySelector('#quote-text');
+      const quoteAuthor = document.querySelector('#quote-author');
+      const quoteSource = document.querySelector('#quote-source');
+      const newQuote = document.querySelector('#new-quote');
+      const cursorGlow = document.querySelector('.cursor-glow');
+
+      const makePetal = () => {
+        const petal = document.createElement('span');
+        petal.className = 'petal';
+        petal.style.left = `${Math.random() * 100}%`;
+        petal.style.animationDuration = `${7 + Math.random() * 10}s`;
+        petal.style.animationDelay = `${Math.random() * -12}s`;
+        petal.style.setProperty('--drift', `${-120 + Math.random() * 240}px`);
+        petal.style.setProperty('--spin', `${300 + Math.random() * 900}deg`);
+        petal.style.setProperty('--size', `${5 + Math.random() * 7}px`);
+        petals?.appendChild(petal);
+      };
+      for (let i = 0; i < 34; i++) makePetal();
+
+      const showQuote = (text, author, source = 'live') => {
+        if (!quoteText || !quoteAuthor) return;
+        quoteText.classList.add('quote-out');
+        setTimeout(() => {
+          quoteText.textContent = `“${text}”`;
+          quoteAuthor.textContent = `— ${author || 'Unknown'}`;
+          quoteSource.textContent = source;
+          quoteText.classList.remove('quote-out');
+        }, 260);
+      };
+
+      const localQuote = () => {
+        const [text, author] = fallbackQuotes[Math.floor(Math.random() * fallbackQuotes.length)];
+        showQuote(text, author, 'offline collection');
+      };
+
+      const fetchQuote = async () => {
+        try {
+          const controller = new AbortController();
+          const timeout = setTimeout(() => controller.abort(), 4500);
+          const response = await fetch('https://dummyjson.com/quotes/random', { signal: controller.signal });
+          clearTimeout(timeout);
+          if (!response.ok) throw new Error('Quote API unavailable');
+          const data = await response.json();
+          if (!data.quote) throw new Error('Invalid quote');
+          showQuote(data.quote, data.author, 'live from the web');
+        } catch {
+          localQuote();
+        }
+      };
+
+      newQuote?.addEventListener('click', fetchQuote);
+      fetchQuote();
+      setInterval(fetchQuote, 60000);
+
+      window.addEventListener('pointermove', (event) => {
+        cursorGlow?.style.setProperty('--x', `${event.clientX}px`);
+        cursorGlow?.style.setProperty('--y', `${event.clientY}px`);
+      }, { passive: true });
+
+      const hero = document.querySelector('.hero');
+      window.addEventListener('scroll', () => {
+        const y = Math.min(window.scrollY, 700);
+        hero?.style.setProperty('--hero-shift', `${y * 0.14}px`);
+      }, { passive: true });
+    </script>
+  </body>
+</html>
