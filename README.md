@@ -23,7 +23,6 @@
   </p>
 
   <p>
-    <img src="https://img.shields.io/badge/MAINTAINER-Zangetsu-ffb7c5?style=for-the-badge&labelColor=0d1117&logo=github&logoColor=ff9ecd" alt="Zangetsu maintainer" />
     <img src="https://img.shields.io/badge/WORKSPACE-Termux-ff9ecd?style=for-the-badge&labelColor=0d1117&logo=linux&logoColor=ffb7c5" alt="Termux workspace" />
     <img src="https://img.shields.io/badge/GENRE-RomCom_%26_Fantasy-ffb7c5?style=for-the-badge&labelColor=0d1117" alt="RomCom and Fantasy" />
   </p>
